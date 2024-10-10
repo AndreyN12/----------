@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Библиотека книг</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div id="cont" class="header__container _container">
+        <h1 class="header__logo">B-teka</h1>
+        <h2 class="header__title ">
+          Книжная библиотека
+        </h2>
+        <p id="b" class="title">Книг: 0</p>
+      </div>
+    </header>
+    <main class="page">
+      <div class="card bg-light _container">
+        <div class="card-header">Добавить новую книгу</div>
+        <div class="card-body">
+          <form id="form">
+            <div class="form-group">
+              <input type="text" name="Name" class="form-control" id="bookName" placeholder="Название книги" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Author" class="form-control" id="bookAuthor" placeholder="Автор книги" required>
+            </div>
+            <div class="form-group">
+              <input type="date" name="Year" class="form-control date" id="bookYear" placeholder="Год издания" required>
+            </div>
+            <div class="form-group">
+              <input type="text" name="Genre" class="form-control" id="bookGenre" placeholder="Жанр книги" required>
+            </div>
+            <button onclick="addBook()" type="submit" class="btn btn-primary  btn-lg active">Добавить</button>
+          </form>
+          <form id="formFilter" class="form-filter">
+            <div class="form-group"></div>
+            <input type="text" name="Genre" class="form-control  filtr" id="filterInput"
+              placeholder="Статус: Прочитано / Не прочитано" required>
+        </div>
+        <button onclick="filterBook()" type="submit" class="btn btn-primary  btn-lg active">Фильтр</button>
+        </form>
+        <button onclick="filterBookOf()" type="submit" class="btn btn-primary filt btn-lg active">Сброс фильтра</button>
+        </form>
+      </div>
+      <section class="book-lists _container" id="bookList">
+        <div class="book__wrapper">
+
+        </div>
+
+      </section>
+
+    </main>
+    <footer class="footer"></footer>
+  </div>
+  <script src="./main3.js"></script>
+</body>
+
+</html>
